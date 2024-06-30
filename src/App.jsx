@@ -4,20 +4,7 @@ import './App.css'
 function App() {
   const [code1, setCode1] = useState("404")
   const [code2, setCode2] = useState("404")
-  const txt = useRef(null)
-
-  // fetch("https://http.cat/100")
-  //   .then(resp => resp.json())
-  //   .then(data => console.log(data))
-  //   .catch(error => console.error('error:', error))
-  
-  const showCat = () => {
-    setCode1(txt.current.value)
-  }
-
-  const changePic = (event) => {
-    setCode2(event.target.value)
-  }
+  const txt = useRef('404')
 
   return (
     <>
@@ -28,7 +15,7 @@ function App() {
         <img src={`https://http.cat/${code1}`} />
       </div>
       <input ref={txt} type="text1" />
-      <button onClick={showCat}>Show Cat</button>
+      <button onClick={() => setCode1(txt.current.value)}>Show Cat</button>
     </div>
 
     <div id="container">
@@ -36,7 +23,7 @@ function App() {
       <div className="box">
         <img src={`https://http.cat/${code2}`} />
       </div>
-      <input onChange={changePic} type="text2" id="text2" />
+      <input onChange={(e) => setCode2(e.target.value)} type="text2" id="text2" />
     </div>
 </div>
     </>
