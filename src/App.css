@@ -26,6 +26,7 @@ img {
 .wrapper {
   display: flex;
   gap: 40px;
+  color: rgb(148, 142, 142);
 }
 
 h1 {
@@ -37,4 +38,8 @@ h1 {
 
 #text2 {
   margin-bottom: 40px;
+}
+
+button {
+  
 }

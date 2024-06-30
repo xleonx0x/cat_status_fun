@@ -36,7 +36,7 @@ function App() {
       <div className="box">
         <img src={`https://http.cat/${code2}`} />
       </div>
-      <input onChange={event => changePic} type="text2" id="text2" />
+      <input onChange={changePic} type="text2" id="text2" />
     </div>
 </div>
     </>
